@@ -1,0 +1,20 @@
+;mini bootloader
+
+global_start
+;segment registers also have an equation
+/*
+physical address = (A * 0x10) + B
+this is to address the memory
+*/
+/* bios executed from rom(read only mem)
+bios executed the os with 0x7c00
+executed bootloader which loads kernel
+bootloader is responsible for loading loading operating system
+bootloader only uses 16 bits
+it loads kernel to mem into 32 bit protective mode which loads up the operating sys
+bios will search all storage mediums for a boot signature which is 0x55AA
+mediums(usb stick, floppy drive ect)
+bios always uses 16 bit code which is limited until they load the kernel from the rom
+the bios is also a kernel since it uses 16 bit code and it runs from rom
+
+
